@@ -1,0 +1,35 @@
+$logoFont: 'Hind', sans-serif;
+$headerFont: 'Source Sans Pro', sans-serif;
+$section_card_background: rgb(59, 63, 79);
+$underline_color: rgb(254, 75, 60);
+$section_card_heading: #fff;
+$main_fonts_color: #fff;
+$foote_font_color: rgb(181, 184, 195);
+$button_color: rgb(229, 170, 57);
+$baner_gradient_left: rgb(229, 170, 57);
+$baner_gradient_right: rgb(149, 43, 81);
+$background_img: url(../img/m-h-night.jpg);
+$main_section_bg: rgb(33, 35, 45);
+
+@mixin button {
+    background-color: map-get($colorsDay, button_color);
+    padding: 10px 40px;
+    border: none;
+    font-size: 15px;
+    border-radius: 3px;
+    color: map-get($colorsDay, section_card_heading);
+}
+
+
+$colorsDay: (
+    section_card_background: rgb(59, 63, 79),
+    underline_color: rgb(254, 75, 60),
+    section_card_heading: #fff,
+    main_fonts_color: #fff,
+    foote_font_color: rgb(181, 184, 195),
+    button_color: rgb(229, 170, 57),
+    baner_gradient_left: rgb(229, 170, 57),
+    baner_gradient_right: rgb(149, 43, 81),
+    main_section_bg: rgb(33, 35, 45)
+);
+

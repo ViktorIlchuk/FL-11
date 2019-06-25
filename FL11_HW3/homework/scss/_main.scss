@@ -1,0 +1,197 @@
+body{
+    margin: 0;
+    font-family: $logoFont;
+    color:  map-get($colorsDay, main_fonts_color);
+    background-color: map-get($colorsDay, main_section_bg);
+    header{
+        background-image: $background_img;
+        background-position: center;
+        
+        
+        border-radius: 0 0 50% 0;
+        background-color: map-get($colorsDay ,main_section_bg);
+        .landing-logo{
+            display: flex;   
+            img{
+                padding-left: 121px;
+                padding-top: 16px;
+                height: 40px;
+            }
+            p{
+                padding-left: 12px;
+                padding-top: 3px;
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+                line-height: 1.1;
+                span{
+                    font-size: 9px;
+                    padding-left: 5px;
+                }
+            }           
+        }
+        .header_heading{
+            font-size: 55px;
+            padding-right: 680px;
+            padding-left: 129px;
+            margin-top: 40px;
+            margin-bottom: 75px;
+            font-family: $headerFont;
+            font-weight: bold;
+            line-height: 1;
+            position: relative;
+            z-index: 100;
+        }
+        
+        .header_heading::after{
+            content: '';
+            position: absolute;
+            z-index: -100;
+            border-bottom: 19px solid map-get($colorsDay, underline_color);
+            width: 230px;
+            top: 92px;
+            left: 129px;
+        }    
+        .header_text{
+            padding-left: 129px; 
+            font-weight: lighter;
+            line-height: 1.6;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-right: 620px;
+            white-space: pre-line;
+        }
+
+        button{
+            @include button;
+            margin-left: 129px;
+            margin-top: 87px;
+            margin-bottom: 160px;
+        }
+    }
+
+    .section_text{
+        text-align: center; 
+        font-size: 35px;  
+        position: relative;
+        z-index: 100;  
+    }
+
+    .section_text::after{
+        content: '';
+        position: absolute;
+        z-index: -100;
+        border-bottom: 10px solid map-get($colorsDay, underline_color);
+        width: 154px;
+        right: 471px;
+        top: 30px;
+    }
+    .section_card_wrap{        
+        display: flex;
+        justify-content: center;
+        background-color: map-get($colorsDay, main_section_bg );
+        .section_card{
+            text-align: center;
+            background-color: map-get($colorsDay, section_card_background);
+            width: 300px;
+            margin: 10px;
+            border-radius: 7px;
+            .section_card_img{
+                width: 275px;
+                margin: 10px;
+                border-radius: 5px;
+            }
+            .section_card_heading{
+                font-size: 20px;
+                color: map-get($colorsDay, section_card_heading);
+                margin: 0;
+                display: inline-block;
+                position: relative;
+                z-index: 100;
+                .section_card_underline{
+                    @extend .section_text::after;
+                    width: 100%;
+                    right: 0px;
+                    top: 15px;
+                }
+            }
+            .section_card_text{
+                color: map-get($colorsDay, foote_font_color);
+                font-size: 12px;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        }
+    }
+    .section_banner{
+        display: flex;
+        background: linear-gradient(0.25turn, $baner_gradient_left, $baner_gradient_right);
+        justify-content: space-around;
+        margin-right: 280px;
+        margin-left: 280px;
+        margin-top: 130px;
+        border-radius: 5px;
+        position: absolute;
+        top: 1200px;        
+        width: 700px;
+        height: 120px;
+        .section_banner_heading{
+            font-size: 22px;
+            position: relative;
+            z-index: 100;
+        }
+        .section_banner_heading::after{
+            @extend .section_text::after;
+            right: 159px;
+            width: 45px;
+            top: 17px;
+        }
+        .section_banner_text{
+            font-size: 12px;
+            color: map-get($colorsDay, foote_font_color);
+        }
+        .section_banner_button{
+            @include button;
+            width: 130px;
+            height: 40px;
+            margin-top: 40px
+        }
+    }
+    .footer-wrap{
+        background-color: $section_card_background;
+        color: map-get($colorsDay, foote_font_color);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 125px;
+        padding-bottom: 37px;
+        margin-top: 160px;
+        .footer_logo{
+            display: flex;
+        }
+        .footer_text{
+            width: 200px;
+            font-size: 10px;
+        }    
+        img{
+            height: 44px;        
+        }
+        p {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0px;
+            margin-left: 10px;
+            span{          
+                font-size: 10px;
+            }
+        }
+    
+        .footer-cr{
+            font-size: 13px;
+        }
+    }    
+}
+
+
+
+

@@ -1,0 +1,31 @@
+$logoFont: 'Hind', sans-serif;
+$headerFont: 'Source Sans Pro', sans-serif;
+$section_card_background: rgb(33, 35, 45);
+$underline_color: #009ec0;
+$section_card_heading: #fff;
+$main_fonts_color: rgb(44, 47, 59);
+$foote_font_color: rgb(181, 184, 195);
+$button_color: rgb(102, 152, 47);
+$baner_gradient_left: rgb(102, 151, 47);
+$baner_gradient_right: rgb(41, 94, 211);
+$background_img: url(../img/m-h-day.jpg);
+$main_section_bg: #fff;
+@mixin button {
+    background-color: map-get($colorsDay, button_color);
+    padding: 10px 40px;
+    border: none;
+    font-size: 15px;
+    border-radius: 3px;
+    color: map-get($colorsDay, section_card_heading);
+}
+
+$colorsDay: (
+    section_card_background: rgb(33, 35, 45),
+    underline_color: #009ec0,
+    section_card_heading: #fff,
+    main_fonts_color: rgb(44, 47, 59),
+    foote_font_color: rgb(181, 184, 195),
+    button_color: rgb(102, 152, 47),
+    main_section_bg: #fff
+);
+
