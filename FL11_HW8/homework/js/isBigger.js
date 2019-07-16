@@ -4,4 +4,4 @@ let isBigger = function(a, b){
     return console.log(c);
 }
 
-isBigger(5, -1); 
+isBigger(5, -1);
