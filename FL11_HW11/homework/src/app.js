@@ -9,13 +9,9 @@ function addAction(inputText){
     div.classList.add('container');
     div.draggable = true;
     div.addEventListener('dragstart', (event) => {
-        console.log('dragstart');
-        
         event.dataTransfer.setData('text', rootNode.childNodes.length);
     })
-    div.addEventListener('drop', (event) => {
-        console.log('drop');
-        
+    rootNode.addEventListener('drop', (event) => {
         const div = event.dataTransfer.getData('text');
         const pointA = document.getElementById(div)
         const pointB = document.getElementById(event.target.parentNode.id)
